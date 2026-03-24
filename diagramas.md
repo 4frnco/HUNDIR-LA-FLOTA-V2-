@@ -519,3 +519,6 @@ Son los diagramas que mejor explican cómo se comunican los objetos dentro del p
 En un diagrama de flujo se usa un óvalo para marcar el inicio y el fin, un rectángulo para las acciones o procesos y un rombo para las decisiones o preguntas que pueden tener varias salidas, como “sí” o “no”.
 
 Las flechas indican el orden en que se ejecuta el programa, conectando cada símbolo desde el inicio hasta el final según la lógica del código.
+
+# Diagrama de victor uniendo casilla:
+![img.png](img.png)
