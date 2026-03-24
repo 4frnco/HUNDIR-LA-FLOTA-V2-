@@ -1,12 +1,15 @@
-from casilla import *
+
+from casilla import *  # Importa todo lo que haya en casilla.py, como Casilla y Nave si estuviera disponible
 
 class Tablero:
     def __init__(self, tamanho=10):
 
+        # Constantes para representar resultados posibles de un disparo
         self.AGUA = 0
         self.TOCADO = 1
         self.HUNDIDO = 2
 
+        # Creación de las distintas naves del tablero
         por1 = Nave("Manuel", "portaaviones", 5)
         fra1 = Nave("Damián", "fragata", 3)
         fra2 = Nave("Elena", "fragata", 3)
@@ -17,6 +20,10 @@ class Tablero:
         sub3 = Nave("U-505", "submarino", 1)
         sub4 = Nave("U-534", "submarino", 1)
 
+        # Matriz 10x10 que representa el tablero del juego
+        # Cada elemento es una Casilla
+        # Si pone 'agua', no hay nave
+        # Si pone una variable como por1 o fra1, esa casilla pertenece a esa nave
         self.casillero = [
             [Casilla('agua'), Casilla('agua'), Casilla('agua'), Casilla('agua'), Casilla('agua'), Casilla('agua'), Casilla('agua'), Casilla('agua'), Casilla('agua'), Casilla('agua')],
             [Casilla(por1), Casilla(por1), Casilla(por1), Casilla(por1), Casilla(por1), Casilla('agua'), Casilla('agua'), Casilla('agua'), Casilla('agua'), Casilla('agua')],
