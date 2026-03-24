@@ -4,7 +4,7 @@ from casilla import *  # Importa todo lo que haya en casilla.py, como Casilla y 
 class Tablero:
     def __init__(self, tamanho=10):
 
-        # Constantes para representar resultados posibles de un disparo
+        # Constantes para representar resultados posibles de un disparoo
         self.AGUA = 0
         self.TOCADO = 1
         self.HUNDIDO = 2

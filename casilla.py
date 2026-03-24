@@ -5,7 +5,7 @@ class Casilla:
         # Guarda lo que hay en la casilla: 'agua' o un objeto Nave
         self.nave = nave
 
-        # Indica si esta casilla ya fue disparada antes
+        # Indica si esta casilla ya fue disparada antess
         self.disparada = False
 
     def recibir_disparo(self):

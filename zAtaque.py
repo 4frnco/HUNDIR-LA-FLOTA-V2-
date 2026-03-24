@@ -6,7 +6,7 @@ class Ataque:
     def __init__(self, x, y, resultado=None):
         self.x = x
         self.y = y
-        self.resultado = resultado  # 0=agua,1=tocado,2=hundido
+        self.resultado = resultado  # 0=agua,1=tocado,2=hundidoo
 
     def __str__(self):
         resultados = {0:"Agua", 1:"Tocado", 2:"Hundido"}

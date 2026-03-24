@@ -6,7 +6,7 @@ class Nave:
         # Tipo de nave: portaaviones, fragata, submarino...
         self.tipo = tipo
 
-        # Vida actual de la nave
+        # Vida actual de la navee
         self.vida = vida
 
         # Indica si ya está hundida o no

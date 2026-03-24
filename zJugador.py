@@ -13,7 +13,7 @@ class Jugador:
         # Cada jugador tiene su propio tablero
         self.tablero = Tablero()
 
-        # Guarda una lista de naves únicas del tablero
+        # Guarda una lista de naves únicas del tableroo
         self.flota = self._obtener_flota()
 
     def _obtener_flota(self):

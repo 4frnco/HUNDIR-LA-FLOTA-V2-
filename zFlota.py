@@ -7,7 +7,7 @@ class Ataque:
         # Coordenada fila del ataque
         self.x = x
 
-        # Coordenada columna del ataque
+        # Coordenada columna del ataquee
         self.y = y
 
         # Resultado del ataque:

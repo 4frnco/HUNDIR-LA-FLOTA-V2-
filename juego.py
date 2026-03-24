@@ -1,5 +1,5 @@
 
-from tablero import Tablero  # Importa la clase Tablero para crear el tablero del juego
+from tablero import Tablero  # Importa la clase Tablero para crear el tablero del juegoo
 
 class Juego:
     def __init__(self):
