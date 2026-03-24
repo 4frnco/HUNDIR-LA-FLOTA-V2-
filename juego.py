@@ -1,3 +1,5 @@
+
+
 from tablero import Tablero
 
 class Juego:
@@ -7,7 +9,7 @@ class Juego:
         self.lanzar_ataque(1, 0)
         self.lanzar_ataque(1, 1)
         self.lanzar_ataque(1, 2)
-        self.lanzar_ataque(5, 1)
+        self.lanzar_ataque(2, 1)
         self.lanzar_ataque(1, 4)
 
     def mostrar_resultado(self, resultado):
@@ -27,4 +29,72 @@ class Juego:
             self.mostrar_resultado(resultado)
 
 
+
 juego = Juego()
+
+
+
+
+'''
+########################################################## CLASE JUEGO UPGRADEADA ##########################################################
+
+# juego.py
+from zJugador import Jugador
+from zAtaque import Ataque
+
+class Juego:
+    def __init__(self):
+        # Crear dos jugadores con su tablero y flota
+        self.jugador1 = Jugador("Player1")
+        self.jugador2 = Jugador("Player2")
+        self.historial = []  # Guarda ataques de ambos jugadores
+
+        # Ataques de ejemplo al jugador1
+        self.lanzar_ataque(self.jugador1, 1, 0)
+        self.lanzar_ataque(self.jugador1, 1, 1)
+
+        # Ataques de ejemplo al jugador2
+        self.lanzar_ataque(self.jugador2, 0, 0)
+        self.lanzar_ataque(self.jugador2, 1, 2)
+
+        # Mostrar estado final de la flota de ambos jugadores
+        print("\nEstado final de la flota Jugador1:")
+        self.jugador1.mostrar_flota()
+
+        print("\nEstado final de la flota Jugador2:")
+        self.jugador2.mostrar_flota()
+
+        # Mostrar historial de ataques
+        print("\nHistorial de ataques:")
+        for ataque in self.historial:
+            print(ataque)
+
+    def lanzar_ataque(self, jugador, x, y):
+        """Ataca la casilla (x,y) del tablero del jugador"""
+        print(f"\nAtacando coordenadas ({x},{y}) en {jugador.nombre}")
+        casilla = jugador.tablero.casillero[x][y]
+        resultado = casilla.recibir_disparo()  # 0=Agua, 1=Tocado, 2=Hundido
+
+        # Guardar ataque en historial
+        ataque = Ataque(x, y, resultado)
+        self.historial.append(ataque)
+
+        # Mostrar resultado en pantalla
+        if resultado == 0:
+            print("Resultado: Agua")
+        elif resultado == 1:
+            print("Resultado: Tocado")
+        elif resultado == 2:
+            print(f"Resultado: Hundido - {casilla.nave.nombre}")
+        else:
+            # Caso de casilla ya disparada
+            if casilla.nave != 'agua':
+                print(f"Casilla ya disparada con {casilla.nave.nombre}, vida restante: {casilla.nave.vida}")
+            else:
+                print("Casilla ya disparada (Agua)")
+
+# Ejecutar juego
+if __name__ == "__main__":
+    juego = Juego()
+
+'''
